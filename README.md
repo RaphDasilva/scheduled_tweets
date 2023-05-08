@@ -1,24 +1,53 @@
-# README
+# Scheduled Tweets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scheduled Tweets is a web application for scheduling and publishing tweets at a specific date and time.
 
-Things you may want to cover:
+## Ruby Version
 
-* Ruby version
+This application requires Ruby version 3.0.1 or higher.
 
-* System dependencies
+## System Dependencies
 
-* Configuration
+Scheduled Tweets requires the following dependencies:
 
-* Database creation
+- Ruby on Rails
+- PostgreSQL
 
-* Database initialization
+## Configuration
 
-* How to run the test suite
+1. Clone the repository to your local machine.
+2. Install dependencies with `bundle install`.
+3. Create a new `.env` file and add your Twitter API credentials.
+4. Run the database migrations with `rails db:migrate`.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Database Creation
 
-* Deployment instructions
+To create the database, run the following command:
+`rails db:create`
 
-* ...
+
+## Database Initialization
+
+To initialize the database with sample data, run the following command:
+
+`rails db:seed`
+
+
+## How to Run the Test Suite
+
+To run the test suite, use the following command:
+
+`rspec`
+
+
+## Services
+
+Scheduled Tweets uses the Twitter API to send tweets. You will need to obtain API credentials from Twitter and add them to your `.env` file.
+
+## Deployment Instructions
+
+1. Deploy the application to your hosting provider.
+2. Add your production API credentials to your hosting environment's environment variables.
+3. Run the database migrations with `rails db:migrate`.
+4. Start the Rails server with `rails server`.
+5. Configure a worker to run the Rails console and send scheduled tweets at the appropriate times.
